@@ -1,0 +1,91 @@
+﻿<Window x:Class="IGN_Zarzadzanie.Wprowadz_zamowienie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="" Height="523" Width="918" Topmost="False" Name="Wprowadz_Zamowienie_Window" PreviewKeyDown="Wprowadz_Zamowienie_Window_PreviewKeyDown" Loaded="Wprowadz_Zamowienie_Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" FontWeight="Bold" Icon="/IGN-Zarzadzanie;component/Images/IGN_LOGO.ico">
+    <Grid Height="488" Width="899" Background="#FFF9F9F9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="68" />
+            <RowDefinition Height="329*" />
+            <RowDefinition Height="12" />
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FFE4FFDE" Height="56" HorizontalAlignment="Left" Margin="12,343,0,0" Name="rectangle6" Stroke="{x:Null}" VerticalAlignment="Top" Width="782" Grid.Row="1" />
+        <Rectangle Fill="#FFE2E2FF" Height="97" HorizontalAlignment="Left" Margin="703,18,0,0" Name="rectangle2" Stroke="{x:Null}" VerticalAlignment="Top" Width="184" Grid.Row="1" />
+        <Rectangle Fill="#FFFFFFD8" Height="137" HorizontalAlignment="Left" Margin="586,86,0,0" Name="rectangle5" Stroke="{x:Null}" VerticalAlignment="Top" Width="117" Grid.Row="1" />
+        <Rectangle Fill="#FFE2E2FF" Height="68" HorizontalAlignment="Right" Margin="0,154,13,0" Name="rectangle3" Stroke="{x:Null}" VerticalAlignment="Top" Width="183" Grid.Row="1" />
+        <Rectangle Fill="#FFE4FFDE" Height="56" HorizontalAlignment="Left" Margin="703,108,0,0" Name="rectangle4" Stroke="{x:Null}" VerticalAlignment="Top" Width="184" Grid.Row="1" />
+        <Button Content="Zatwierdź" Height="23" HorizontalAlignment="Left" Margin="811,341,0,0" Name="Zatwierdz_BTN" VerticalAlignment="Top" Width="75" Click="Zatwierdz_BTN_Click" Grid.Row="1" Background="#FFE4FFDE" />
+        <Button Content="Anuluj" Height="23" HorizontalAlignment="Left" Margin="811,0,0,13" Name="Anuluj_BTN" VerticalAlignment="Bottom" Width="75" Click="Anuluj_BTN_Click" Grid.Row="1" Background="#FFE4FFDE" />
+        <TextBox Height="23" HorizontalAlignment="Left" Name="data_textBox" VerticalAlignment="Top" Width="75" Margin="12,36,0,0" IsEnabled="False" Grid.RowSpan="2" />
+        <ComboBox HorizontalAlignment="Left" Height="23" Margin="140,36,0,0" Name="wyszukaj_klienta" VerticalAlignment="Top" IsReadOnly="False" IsEditable="True" IsTextSearchEnabled="False" IsTextSearchCaseSensitive="False" Focusable="True" IsHitTestVisible="True" IsTabStop="True" IsEnabled="True" PreviewMouseLeftButtonUp="wyszukaj_klienta_PreviewMouseLeftButtonUp" SelectionChanged="wyszukaj_klienta_SelectionChanged" Width="145" />
+        <ComboBox HorizontalAlignment="Left" Focusable="True" Height="23" IsEditable="True" IsEnabled="True" IsHitTestVisible="True" IsReadOnly="False" IsTabStop="True" IsTextSearchCaseSensitive="False" IsTextSearchEnabled="False" Margin="459,37,0,0" Name="wyszukaj_produkt" VerticalAlignment="Top" PreviewMouseLeftButtonUp="wyszukaj_produkt_PreviewMouseLeftButtonUp" SelectionChanged="wyszukaj_produkt_SelectionChanged" Width="157" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="126,36,0,0" Name="klient_textBox" VerticalAlignment="Top" Width="173" TextChanged="klient_textBox_TextChanged" />
+        <Label Content="Data:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" Grid.RowSpan="2" />
+        <Label Content="Klient:" Height="28" HorizontalAlignment="Left" Margin="126,12,0,0" Name="label2" VerticalAlignment="Top" />
+        <Rectangle Height="50" HorizontalAlignment="Left" Margin="433,15,0,0" Name="rectangle1" Stroke="{x:Null}" Fill="#FFE2E2FF" VerticalAlignment="Top" Width="454" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,37,267,0" Name="produkt_textBox" VerticalAlignment="Top" Width="182" TextChanged="produkt_textBox_TextChanged" />
+        <Label Content="Produkt:" Height="28" HorizontalAlignment="Left" Margin="450,12,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="Cena za m2:" HorizontalAlignment="Left" Margin="688,34,0,11" Name="label4" />
+        <RadioButton Content="EKO" Height="16" HorizontalAlignment="Left" Margin="688,17,0,0" Name="eko_RadioBTN" VerticalAlignment="Top" Visibility="Visible" Checked="eko_RadioBTN_Checked" />
+        <RadioButton Content="BEST" Height="16" HorizontalAlignment="Left" Margin="750,17,0,0" Name="best_RadioBTN" VerticalAlignment="Top" Visibility="Visible" Checked="best_RadioBTN_Checked" />
+        <RadioButton Content="DETAL" Height="16" HorizontalAlignment="Left" Margin="816,17,0,0" Name="detal_RadioBTN" VerticalAlignment="Top" Visibility="Visible" Checked="detal_RadioBTN_Checked" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="772,36,0,0" Name="cena_m2_textBox" VerticalAlignment="Top" Width="97" TextChanged="cena_m2_textBox_TextChanged" PreviewTextInput="cena_m2_textBox_PreviewTextInput" GotKeyboardFocus="cena_m2_textBox_GotKeyboardFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="421,371,0,0" Name="cena_NETTO_textBox" VerticalAlignment="Top" Width="147" Grid.Row="1" IsReadOnly="False" IsEnabled="False" />
+        <Label Content="Koszt zamówienia NETTO:" Height="28" HorizontalAlignment="Left" Margin="421,343,0,0" Name="label5" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="613,370,0,0" Name="cena_BRUTTO_textBox" VerticalAlignment="Top" Width="154" Grid.Row="1" IsEnabled="False" />
+        <Label Content="Koszt zamówienia BRUTTO:" Height="28" HorizontalAlignment="Left" Margin="613,343,0,0" Name="label6" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="767,28,0,0" Name="szerokosc_textBox" VerticalAlignment="Top" Width="75" Grid.Row="1" PreviewTextInput="szerokosc_textBox_PreviewTextInput" GotKeyboardFocus="szerokosc_textBox_GotKeyboardFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="767,74,0,0" Name="dlugosc_textBox" VerticalAlignment="Top" Width="75" Grid.Row="1" PreviewTextInput="dlugosc_textBox_PreviewTextInput" GotKeyboardFocus="dlugosc_textBox_GotKeyboardFocus" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="767,125,0,0" Name="ilosc_sztuk_textBox" VerticalAlignment="Top" Width="75" Grid.Row="1" PreviewTextInput="ilosc_sztuk_textBox_PreviewTextInput" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="767,186,0,0" Name="m2_liczone_textBox" VerticalAlignment="Top" Width="75" Grid.Row="1" PreviewTextInput="m2_liczone_textBox_PreviewTextInput" />
+        <Label Content="x" Height="28" HorizontalAlignment="Left" Margin="797,49,0,0" Name="label7" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="m2" Height="28" HorizontalAlignment="Left" Margin="848,184,0,0" Name="label9" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="m" Height="28" HorizontalAlignment="Left" Margin="848,28,0,0" Name="label10" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="m" Height="28" HorizontalAlignment="Left" Margin="848,74,0,0" Name="label11" VerticalAlignment="Top" Grid.Row="1" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="595,128,0,0" Name="m2_suma_textBox" VerticalAlignment="Top" Width="95" Grid.Row="1" IsReadOnly="False" IsEnabled="False" TextChanged="m2_suma_textBox_TextChanged" />
+        <Label Content="sztuk" Height="28" HorizontalAlignment="Left" Margin="848,125,0,0" Name="label13" VerticalAlignment="Top" Grid.Row="1" />
+        <Rectangle Fill="#FFFFFFD8" Height="46" HorizontalAlignment="Left" Margin="586,18,0,0" Name="rectangle8" Stroke="{x:Null}" VerticalAlignment="Top" Width="117" Grid.Row="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="638,28,0,0" Name="sztuki_textBox" VerticalAlignment="Top" Width="52" Grid.Row="1" IsReadOnly="False" IsEnabled="False"/>
+        <Label Content="Sztuk:" Height="28" HorizontalAlignment="Left" Margin="595,28,0,0" Name="label20" VerticalAlignment="Top" Grid.Row="1" />
+        <Button Content="+" Height="23" HorizontalAlignment="Left" Margin="719,50,0,0" Name="Sumuj_wymiary_BTN" VerticalAlignment="Top" Width="27" Click="Sumuj_BTN_Click" Grid.Row="1" Background="#FFE4FFDE" />
+        <Button Content="-" Height="23" HorizontalAlignment="Left" Margin="663,0,0,291" Name="Czysc_BTN" VerticalAlignment="Bottom" Width="27" Click="Czysc_BTN_Click" Grid.Row="1" Background="#FFE4FFDE" />
+        <Label Content="m2:" Height="28" HorizontalAlignment="Left" Margin="595,94,0,0" Name="label14" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="zł" Height="28" HorizontalAlignment="Left" Margin="572,371,0,0" Name="label15" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="zł" Height="28" HorizontalAlignment="Left" Margin="771,370,0,0" Name="label16" VerticalAlignment="Top" Grid.Row="1" />
+        <Button Height="23" HorizontalAlignment="Left" Margin="93,36,0,0" Name="Zmien_calendarz" VerticalAlignment="Top" Width="24" Click="Zmien_calendarz_Click" Grid.RowSpan="2" Background="#FFE4FFDE" />
+        <Button Content="+" Height="23" HorizontalAlignment="Left" Margin="306,36,0,0" Name="dodaj_klienta" VerticalAlignment="Top" Width="27" Click="dodaj_klienta_Click" Grid.RowSpan="2" Background="#FFE4FFDE" />
+        <Button Content="+" Height="23" HorizontalAlignment="Left" Margin="638,37,0,0" Name="dodaj_produkt" VerticalAlignment="Top" Width="27" Click="dodaj_produkt_Click" Grid.RowSpan="2" Background="#FFE4FFDE" />
+        <TextBox Height="28" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="False" Margin="595,181,0,0" Name="cena_suma_textBox" VerticalAlignment="Top" Width="95" Grid.Row="1" />
+        <Label Content="zł netto:" Height="28" HorizontalAlignment="Left" Margin="595,155,0,0" Name="label17" VerticalAlignment="Top" Grid.Row="1" />
+        <Button Content="+" Height="23" HorizontalAlignment="Left" Margin="556,32,0,0" Name="sumuj_zamowienia_BTN" VerticalAlignment="Top" Width="27" Grid.Row="1" Click="sumuj_zamowienia_BTN_Click" Background="#FFE4FFDE" />
+        <Button Content="-" Height="23" HorizontalAlignment="Left" Margin="556,61,0,0" Name="usun_zamowienie_BTN" VerticalAlignment="Top" Width="27" Grid.Row="1" Click="usun_zamowienie_BTN_Click" Background="#FFE4FFDE" />
+        <Button Content="+" Height="23" HorizontalAlignment="Left" Margin="719,0,0,200" Name="sumuj_m2_BTN" VerticalAlignment="Bottom" Width="27" Grid.Row="1" Click="sumuj_m2_BTN_Click" Background="#FFE4FFDE" />
+        <DataGrid AutoGenerateColumns="True" CanUserAddRows="False" GridLinesVisibility="Horizontal" IsReadOnly="True" ItemsSource="{Binding}" Margin="12,16,355,89" Name="zamowienia_dataGrid" SelectionMode="Single" Grid.Row="1" LoadingRow="zamowienia_dataGrid_LoadingRow" MouseDoubleClick="zamowienia_dataGrid_MouseDoubleClick" MouseRightButtonDown="zamowienia_dataGrid_MouseRightButtonDown">
+
+        </DataGrid>
+        <Calendar Height="170" HorizontalAlignment="Left" Margin="12,66,0,0" Name="calendar1" VerticalAlignment="Top" Width="180" SelectedDatesChanged="calendar1_SelectedDatesChanged" Visibility="Visible" Grid.RowSpan="2" />
+        <Label Content="Status:" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="16,343,0,0" Name="label8" VerticalAlignment="Top" />
+        <ComboBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="18,370,0,0" Name="status_comboBox" VerticalAlignment="Top" Width="120" IsReadOnly="True" IsEditable="True" SelectedIndex="0" SelectionChanged="status_comboBox_SelectionChanged">
+            <ComboBoxItem IsSelected="True" Content="W kolejce"/>
+            <ComboBoxItem Content="W realizacji"/>
+            <ComboBoxItem Content="Zrobione"/>
+            <ComboBoxItem Content="Archiwum"/>
+        </ComboBox>
+        <Label Content="Faktura:" Height="28" HorizontalAlignment="Left" Margin="282,343,0,0" Name="label12" VerticalAlignment="Top" Grid.Row="1" />
+        <ComboBox Height="23" HorizontalAlignment="Left" IsEditable="True" IsReadOnly="True" Margin="282,370,0,0" Name="faktura_comboBox" SelectedIndex="0" VerticalAlignment="Top" Width="120" Grid.Row="1" SelectionChanged="faktura_comboBox_SelectionChanged">
+            <ComboBoxItem Content="Niewypisana" IsSelected="True" />
+            <ComboBoxItem Content="Wypisana" />
+            <ComboBoxItem Content="Brak" />
+        </ComboBox>
+        <Rectangle Fill="#FFF5796E" Height="90" HorizontalAlignment="Right" Margin="0,229,13,0" Name="rectangle7" Stroke="{x:Null}" VerticalAlignment="Top" Width="330" Grid.Row="1" />
+        <Label Content="Zapłata:" Height="28" HorizontalAlignment="Left" Margin="151,343,0,0" Name="label18" VerticalAlignment="Top" Grid.Row="1" />
+        <ComboBox Height="23" HorizontalAlignment="Left" IsEditable="True" IsReadOnly="True" Margin="151,370,0,0" Name="zaplata_comboBox" SelectedIndex="0" VerticalAlignment="Top" Width="120" Grid.Row="1" SelectionChanged="zaplata_comboBox_SelectionChanged">
+            <ComboBoxItem Content="Nie" IsSelected="True" />
+            <ComboBoxItem Content="Gotówka" />
+            <ComboBoxItem Content="Przelew" />
+            <ComboBoxItem Content="Przedpłata" />
+            <ComboBoxItem Content="Karta" />
+        </ComboBox>
+        <Label Content="Uwagi:" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="556,229,0,0" Name="label19" VerticalAlignment="Top" />
+        <TextBox Grid.Row="1" Height="57" HorizontalAlignment="Left" Margin="563,254,0,0" Name="uwagi_textbox" VerticalAlignment="Top" Width="316" Background="#FFFFE2D4" AcceptsReturn="True" TextWrapping="Wrap" MaxLines="3" MinLines="3" />
+    </Grid>
+</Window>
