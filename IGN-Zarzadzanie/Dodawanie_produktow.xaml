@@ -1,0 +1,17 @@
+﻿<Window x:Class="IGN_Zarzadzanie.Dodawanie_Produktow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dodawanie Materiału" Height="332" Width="300" Name="Dodawanie_produktow_Window" Topmost="False" ShowInTaskbar="True" DataContext="{Binding}" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFF9F9F9" FontWeight="Bold" Loaded="Dodawanie_produktow_Window_Loaded" Icon="/IGN-Zarzadzanie;component/Images/IGN_LOGO.ico">
+    <Grid Height="294">
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,36,0,0" Name="wprowadz_material_textBox" VerticalAlignment="Top" Width="256" />
+        <Label Content="Materiał:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,108,0,0" Name="wprowadz_cena_agencyjna_EKO_textBox" VerticalAlignment="Top" Width="121" PreviewTextInput="wprowadz_cena_agencyjna_EKO_textBox_PreviewTextInput"/>
+        <Label Content="Cena agencyjna EKO:" Height="28" HorizontalAlignment="Left" Margin="10,83,0,0" Name="label6" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,166,0,0" Name="wprowadz_cena_agencyjna_BEST_textBox" VerticalAlignment="Top" Width="120" PreviewTextInput="wprowadz_cena_agencyjna_BEST_textBox_PreviewTextInput" />
+        <Label Content="Cena agencyjna BEST:" Height="28" HorizontalAlignment="Left" Margin="10,143,0,0" Name="label7" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,234,0,0" Name="wprowadz_cena_detal_textBox" VerticalAlignment="Top" Width="120" PreviewTextInput="wprowadz_cena_detal_textBox_PreviewTextInput" />
+        <Label Content="Cena detaliczna:" Height="28" HorizontalAlignment="Left" Margin="10,210,0,0" Name="label5" VerticalAlignment="Top" />
+        <Button Content="Zatwierdź" Height="23" HorizontalAlignment="Left" Margin="191,165,0,0" Name="Zatwierdz_BTN" VerticalAlignment="Top" Width="75" Click="Zatwierdz_BTN_Click" Background="#FFE4FFDE" />
+        <Button Content="Anuluj" Height="23" HorizontalAlignment="Left" Margin="191,234,0,0" Name="Anuluj_BTN" VerticalAlignment="Top" Width="75" Click="Anuluj_BTN_Click" Background="#FFE4FFDE" />
+    </Grid>
+</Window>

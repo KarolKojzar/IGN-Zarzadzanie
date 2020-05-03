@@ -1,0 +1,58 @@
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\MainWindow.baml
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\MainWindow.g.cs
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\App.g.cs
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie_MarkupCompile.cache
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.g.resources
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN_Zarzadzanie.Properties.Resources.resources
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.csproj.GenerateResource.Cache
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.exe
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.pdb
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.exe
+c:\users\ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.pdb
+C:\Users\Ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Edycja_produktow.baml
+C:\Users\Ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Edycja_produktow.g.cs
+C:\Users\Ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Dodawanie_produktow.baml
+C:\Users\Ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Dodawanie_produktow.g.cs
+C:\Users\Ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Wprowadz_zamowienie.baml
+C:\Users\Ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Wprowadz_zamowienie.g.cs
+C:\Users\Ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.csprojResolveAssemblyReference.cache
+C:\Users\Ziomboy\documents\visual studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.exe.config
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.exe.config
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.exe
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.pdb
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.csprojResolveAssemblyReference.cache
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Dodawanie_produktow.baml
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\MainWindow.baml
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Edycja_produktow.baml
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Wprowadz_zamowienie.baml
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Dodawanie_produktow.g.cs
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\MainWindow.g.cs
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Edycja_produktow.g.cs
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Wprowadz_zamowienie.g.cs
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\App.g.cs
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie_MarkupCompile.cache
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.g.resources
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN_Zarzadzanie.Properties.Resources.resources
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.csproj.GenerateResource.Cache
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.exe
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.pdb
+I:\Projekty\Projekty VS, android, arduino\Visual Studio 2010\Projects\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\MySql.Data.dll
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.exe.config
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.exe
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.pdb
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.exe
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\bin\Debug\IGN-Zarzadzanie.pdb
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.csprojResolveAssemblyReference.cache
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Dodawanie_produktow.baml
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\MainWindow.baml
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Edycja_produktow.baml
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Wprowadz_zamowienie.baml
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Dodawanie_produktow.g.cs
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Edycja_produktow.g.cs
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\Wprowadz_zamowienie.g.cs
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\App.g.cs
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie_MarkupCompile.cache
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.g.resources
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN_Zarzadzanie.Properties.Resources.resources
+C:\Users\Karol\Desktop\IGN-Zarzadzanie\IGN-Zarzadzanie\obj\x86\Debug\IGN-Zarzadzanie.csproj.GenerateResource.Cache

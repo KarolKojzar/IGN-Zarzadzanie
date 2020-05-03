@@ -1,0 +1,271 @@
+﻿<Window x:Class="IGN_Zarzadzanie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="IGN-Zarzadzanie" Height="600" Width="1024" Icon="/IGN-Zarzadzanie;component/Images/IGN_LOGO.ico" IsEnabled="True" Name="IGN" Background="#FFE8E8E8" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="Manual" ResizeMode="CanResize" FontSize="12" FontWeight="Bold" FontStretch="Normal" AllowsTransparency="False" WindowState="Normal" Closing="IGN_Closing" ShowInTaskbar="True" MaxWidth="1024" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="1024" MinHeight="600" SizeChanged="IGN_SizeChanged" StateChanged="IGN_StateChanged">
+    <Grid HorizontalAlignment="Center" Width="1000" Name="Grid_tlo">
+        <Button Content="Zaloguj" Height="23" HorizontalAlignment="Left" Margin="910,13,0,0" Name="Zaloguj_BTN" VerticalAlignment="Top" Width="75" Click="Zaloguj_BTN_Click" Background="#FFE4FFDE" />
+        <Label Content="Hasło:" Height="28" HorizontalAlignment="Left" Margin="704,12,0,0" Name="label2" VerticalAlignment="Top" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="766,13,0,0" Name="passwordBox" VerticalAlignment="Top" Width="120" KeyDown="OnKeyDownHandler"/>
+        <Button Content="Wyloguj" Height="23" HorizontalAlignment="Left" Margin="910,13,0,0" Name="Wyloguj_BTN" VerticalAlignment="Top" Width="75" Click="Wyloguj_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+        <TabControl Height="520" HorizontalAlignment="Left" Margin="10,30,0,0" Name="tabControl1" VerticalAlignment="Top" Width="980">
+            <TabItem Header="Zamówienia" Name="zamowienia_tab" MouseEnter="zamowienia_tab_MouseEnter">
+                <Grid>
+                    <DataGrid HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="2,4,0,2" Width="780" AutoGenerateColumns="True" CanUserAddRows="False" SelectionMode="Single" GridLinesVisibility="Horizontal" IsReadOnly="True" Name="grid_zamowienia" MouseLeftButtonUp="grid_zamowienia_MouseLeftButtonUp" MouseDoubleClick="grid_zamowienia_MouseDoubleClick" FontWeight="Bold" FontStyle="Normal" Grid.ColumnSpan="2" RowHeight="30" LoadingRow="grid_zamowienia_LoadingRow" Background="White">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Data:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nr zamówienia:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Klienci:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Status zamówienia:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Użytkownik:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Faktura:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Zapłata:"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="SkyBlue" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="SkyBlue" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                    <Rectangle Fill="#FFE2E2FF" Height="81" Margin="817,215,12,0" Name="rectangle6" Stroke="{x:Null}" VerticalAlignment="Top" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="823,36,0,0"  Name="zamowienie_wyszukiwanie_textBox" VerticalAlignment="Top" Width="130" TextChanged="zamowienie_wyszukiwanie_textBox_TextChanged" Grid.Column="1" />
+                    <Button Content="Dodaj" Height="23" HorizontalAlignment="Left" Margin="823,90,0,0"  Name="Wprowadz_zamowienie_BTN" VerticalAlignment="Top" Width="130" Click="Wprowadz_zamowienie_BTN_Click" BorderBrush="#FF5A7255" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Button Content="Edytuj" Height="23" HorizontalAlignment="Left" Margin="823,130,0,0" Name="Edytuj_zamowienie_BTN" VerticalAlignment="Top" Width="130" Click="Edytuj_zamowienie_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Label Content="Wyszukaj:" Height="28" HorizontalAlignment="Left" Margin="823,6,0,0"  Name="label6" VerticalAlignment="Top"/>
+                    <Button Height="29" HorizontalAlignment="Left" Margin="785,3,0,0" Name="Odswiez_zamowienie_Button" VerticalAlignment="Top" Width="31" Click="Odswiez_zamowienie_Button_Click">
+                        <Image Source="Images/refresh.png"/>
+                    </Button>
+                    <Button Background="#FFE4FFDE" BorderBrush="#FF5A7255" Content="Podlicz" FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="823,225,0,0" Name="podlicz_Button" VerticalAlignment="Top" Width="130" Click="podlicz_Button_Click" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="823,262,0,0" Name="podlicz_textBox" VerticalAlignment="Top" Width="130" IsEnabled="False" />
+                    
+                </Grid>
+            </TabItem>
+            <TabItem Header="Materiały" Name="materiały_tab" MouseEnter="materialy_click">
+                <Grid>
+                    <DataGrid HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="2,4,0,2" Width="780" AutoGenerateColumns="True" CanUserAddRows="False" SelectionMode="Single" GridLinesVisibility="Horizontal" IsReadOnly="True" MouseLeftButtonUp="grid_materialy_MouseLeftButtonUp" Name="grid_materialy" MouseDoubleClick="grid_materialy_MouseDoubleClick" ColumnWidth="150" LoadingRow="grid_materialy_LoadingRow" RowHeight="30" Background="White">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nr:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Produkt:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Cena EKO:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Cena Best:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Cena Detal:"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="823,36,0,0" Name="Wyszukaj_produktu_textBox" VerticalAlignment="Top" Width="130" TextChanged="Wyszukaj_produktu_textBox_TextChanged" />
+                    <Button Content="Dodaj" Height="23" HorizontalAlignment="Left" Margin="823,90,0,0" Name="Wprowadz_material_BTN" VerticalAlignment="Top" Width="130" Click="Wprowadz_material_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Button Content="Edytuj" Height="23" HorizontalAlignment="Left" Margin="823,130,0,0" Name="Edytuj_material_BTN" VerticalAlignment="Top" Width="130" Click="Edytuj_material_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="823,170,0,0" Name="Usun_material_BTN" VerticalAlignment="Top" Width="130" Click="Usun_material_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Label Content="Wyszukaj:" Height="28" HorizontalAlignment="Left" Margin="823,6,0,0" Name="label5" VerticalAlignment="Top" />
+                    <Button Height="29" HorizontalAlignment="Left" Margin="785,3,0,0" Name="Odswiez_material_Button" VerticalAlignment="Top" Width="31" Click="Odswiez_material_Button_Click">
+                        <Image Source="Images/refresh.png"/>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Klienci" Name="klienci_tab" MouseEnter="klienci_click">
+                <Grid>
+                    <DataGrid HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="2,4,0,2" Name="grid_klienci" Width="600" AutoGenerateColumns="True" CanUserAddRows="False" SelectionMode="Single" GridLinesVisibility="Horizontal" IsReadOnly="True" MouseLeftButtonUp="grid_klienci_MouseLeftButtonUp" ColumnWidth="280" RowHeight="30" RowBackground="{x:Null}" LoadingRow="grid_klienci_LoadingRow" Background="White">
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                    <Rectangle Fill="#FFE2E2FF" Height="43" HorizontalAlignment="Left" Margin="689,254,0,0" Name="rectangle5" Stroke="{x:Null}" VerticalAlignment="Top" Width="244" />
+                    <Label Content="Wprowadź nowego klienta:" Height="28" HorizontalAlignment="Left" Margin="697,135,0,0" Name="label3" VerticalAlignment="Top" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="697,40,0,0" Name="Wyszukaj_klienta_textBox" VerticalAlignment="Top" Width="225" TextChanged="Wyszukaj_klienta_textBox_TextChanged" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="697,161,0,0" Name="wprowadzanie_klienta" VerticalAlignment="Top" Width="227" />
+                    <Button Content="Zatwierdź" Height="23" HorizontalAlignment="Left" Margin="697,190,0,0" Name="Wprowadz_klienta_BTN" VerticalAlignment="Top" Width="227" Click="Wprowadz_klienta_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Rectangle Height="103" HorizontalAlignment="Left" Margin="689,254,0,0" Name="rectangle1" Stroke="{x:Null}" VerticalAlignment="Top" Width="244" Fill="#FFE2E2FF" />
+                    <Button Content="Edycja" Height="23" HorizontalAlignment="Left" Margin="697,264,0,0" Name="Edycja_BTN" VerticalAlignment="Top" Width="227" Click="Edycja_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="697,293,0,0" Name="edycja_textbox" VerticalAlignment="Top" Width="227" />
+                    <Button Content="Zatwierdź" Height="23" HorizontalAlignment="Left" Margin="697,322,0,0" Name="Zatwierdz_BTN" VerticalAlignment="Top" Width="99" Click="Zatwierdz_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Button Content="Anuluj" Height="23" HorizontalAlignment="Right" Margin="0,322,46,0" Name="Anuluj_BTN" VerticalAlignment="Top" Width="99" Click="Anuluj_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="697,385,0,0" Name="Usun_klienta_BTN" VerticalAlignment="Top" Width="227" Click="Usun_klienta_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Label Content="Wyszukaj:" Height="28" HorizontalAlignment="Left" Margin="697,14,0,0"  Name="label4" VerticalAlignment="Top" />
+                    <Button Height="29" HorizontalAlignment="Left" Margin="618,3,0,0" Name="Odswiez_klient_Button" VerticalAlignment="Top" Width="31" Click="Odswiez_klient_Button_Click">
+                        <Image Source="Images/refresh.png"/>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Archiwum" Name="archiwum_tab" MouseEnter="archiwum_click">
+                <Grid>
+                    <DataGrid HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="2,4,0,2" Width="780" AutoGenerateColumns="True" CanUserAddRows="False" SelectionMode="Single" GridLinesVisibility="Horizontal" IsReadOnly="True" Name="grid_archiwum" MouseLeftButtonUp="grid_archiwum_MouseLeftButtonUp" MouseDoubleClick="grid_archiwum_MouseDoubleClick" FontWeight="Bold" FontStyle="Normal" Grid.ColumnSpan="2" RowHeight="30" LoadingRow="grid_archiwum_LoadingRow" Background="White">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Data:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Nr zamówienia:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Klienci:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Faktura:"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Zapłata:"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="823,36,0,0"  Name="archiwum_wyszukiwanie_textBox" VerticalAlignment="Top" Width="130" TextChanged="archiwum_wyszukiwanie_textBox_TextChanged" Grid.Column="1" />
+                    <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="823,90,0,0" Name="Usun_archiwum_BTN" VerticalAlignment="Top" Width="130" Click="Usun_archiwum_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Button Content="Edytuj" Height="23" HorizontalAlignment="Left" Margin="823,130,0,0" Name="Edytuj_archiwum_BTN" VerticalAlignment="Top" Width="130" Click="Edytuj_archiwum_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Label Content="Wyszukaj:" Height="28" HorizontalAlignment="Left" Margin="823,6,0,0"  Name="label7" VerticalAlignment="Top"/>
+                    <Button Height="29" HorizontalAlignment="Left" Margin="785,3,0,0" Name="Odswiez_archiwum_Button" VerticalAlignment="Top" Width="31" Click="Odswiez_archiwum_Button_Click">
+                        <Image Source="Images/refresh.png"/>
+                    </Button>
+                    <Rectangle Fill="#FFE2E2FF" Height="81" Margin="817,215,12,0" Name="rectangle7" Stroke="{x:Null}" VerticalAlignment="Top" />
+                    <Button Background="#FFE4FFDE" BorderBrush="#FF5A7255" Content="Podlicz" FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="823,225,0,0" Name="podlicz_archiwum_Button" VerticalAlignment="Top" Width="130" Click="podlicz_archiwum_Button_Click" />
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="False" Margin="823,262,0,0" Name="podlicz_archiwum_textBox" VerticalAlignment="Top" Width="130" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Statystyki" Name="statystyki_tab" MouseEnter="statystyki_click">
+                <Grid>
+                    <DataGrid HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="2,4,0,2" Width="780" AutoGenerateColumns="True" CanUserAddRows="False" SelectionMode="Single" GridLinesVisibility="Horizontal" IsReadOnly="True" Name="grid_statystyki" FontWeight="Bold" FontStyle="Normal" Grid.ColumnSpan="2" RowHeight="30" LoadingRow="grid_statystyki_LoadingRow" Background="White">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Klienci:"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Kwota:"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="Orange" />
+                                    <Setter Property="Foreground" Value="White" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.CellStyle>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="Orange" />
+                                    <Setter Property="Foreground" Value="White" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
+                    </DataGrid>
+                    <Rectangle Fill="#FFE2E2FF" Height="81" Margin="800,254,12,0" Name="rectangle8" Stroke="{x:Null}" VerticalAlignment="Top" />
+                    <Label Content="Wyszukaj:" HorizontalAlignment="Left" Margin="823,6,0,458" Name="label12" />
+                    <Button Height="29" HorizontalAlignment="Left" Margin="785,3,0,0" Name="Odswiez_statystyki_Button" VerticalAlignment="Top" Width="31" Click="Odswiez_statystyki_Button_Click">
+                        <Image Source="Images/refresh.png"/>
+                    </Button>
+                    <Label Content="Całość:" HorizontalAlignment="Left" Margin="824,262,0,202" Name="label13" />
+                    <TextBox Height="25" HorizontalAlignment="Left" IsEnabled="False" Margin="823,296,0,0" Name="podlicz_statystyki_textBox" VerticalAlignment="Top" Width="117" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="823,36,0,0" Name="wyszukaj_statystyki_textBox" VerticalAlignment="Top" Width="130" TextChanged="statystyki_wyszukiwanie_textBox_TextChanged"/>
+                    <RadioButton Content="Klienci" Height="16" HorizontalAlignment="Left" Margin="823,83,0,0" Name="klienci_radioButton" VerticalAlignment="Top" IsChecked="True" Checked="klienci_radioButton_Checked" />
+                    <RadioButton Content="Materiały" Height="16" HorizontalAlignment="Left" Margin="823,105,0,0" Name="materialy_radioButton" VerticalAlignment="Top" IsChecked="False" Checked="materialy_radioButton_Checked" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Użytkownicy" Name="uzytkownicy_tab" MouseEnter="uzytkownicy_click">
+                <Grid>
+                    <DataGrid HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="2,4,0,2" Name="grid_uzytkownicy" Width="600" AutoGenerateColumns="True" CanUserAddRows="False" SelectionMode="Single" GridLinesVisibility="Horizontal" IsReadOnly="True" MouseLeftButtonUp="grid_uzytkownicy_MouseLeftButtonUp" ColumnWidth="280" RowHeight="30" RowBackground="{x:Null}" LoadingRow="grid_uzytkownicy_LoadingRow" Background="White">
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="Orange" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                    <Rectangle Fill="#FFE2E2FF" Height="43" HorizontalAlignment="Left" Margin="689,254,0,0" Name="rectangle4" Stroke="{x:Null}" VerticalAlignment="Top" Width="244" />
+                    <Rectangle Fill="#FFE2E2FF" Height="158" HorizontalAlignment="Left" Margin="689,75,0,0" Name="rectangle3" Stroke="{x:Null}" VerticalAlignment="Top" Width="244" />
+                    <Label Content="Wprowadź nowego użytkownika:" Height="28" HorizontalAlignment="Left" Margin="697,75,0,0" Name="label8" VerticalAlignment="Top" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="697,40,0,0" Name="Wyszukaj_uzytkownika_textBox" VerticalAlignment="Top" Width="227" TextChanged="Wyszukaj_uzytkownika_textBox_TextChanged" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="697,104,0,0" Name="wprowadzanie_uzytkownika" VerticalAlignment="Top" Width="227" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="697,157,0,0" Name="wprowadzanie_hasla_uzytkownika" VerticalAlignment="Top" Width="227" />
+                    <Button Content="Zatwierdź" Height="23" HorizontalAlignment="Left" Margin="697,190,0,0" Name="Wprowadz_uzytkownika_BTN" VerticalAlignment="Top" Width="227" Click="Wprowadz_uzytkownika_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Rectangle Height="173" HorizontalAlignment="Left" Margin="689,254,0,0" Name="rectangle2" Stroke="{x:Null}" VerticalAlignment="Top" Width="244" Fill="#FFE2E2FF" />
+                    <Button Content="Edycja" Height="23" HorizontalAlignment="Left" Margin="697,264,0,0" Name="Edycja_uzytkownika_BTN" VerticalAlignment="Top" Width="227" Click="Edycja_uzytkownika_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="697,314,0,0" Name="edycja_uzytkownika_textbox" VerticalAlignment="Top" Width="227" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="697,364,0,0" Name="edycja_hasla_textbox" VerticalAlignment="Top" Width="227" />
+                    <Button Content="Zatwierdź" Height="23" HorizontalAlignment="Left" Margin="697,393,0,0" Name="Zatwierdz_uzytkownika_BTN" VerticalAlignment="Top" Width="99" Click="Zatwierdz_uzytkownika_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Button Content="Anuluj" Height="23" HorizontalAlignment="Right" Margin="0,393,44,0" Name="Anuluj_uzytkownika_BTN" VerticalAlignment="Top" Width="99" Click="Anuluj_uzytkownika_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Label Content="Wyszukaj:" Height="28" HorizontalAlignment="Left" Margin="697,14,0,0"  Name="label9" VerticalAlignment="Top" />
+                    <Label Content="Wprowadź hasło użytkownika:" Height="28" HorizontalAlignment="Left" Margin="697,130,0,0" Name="label1" VerticalAlignment="Top" />
+                    <Button Content="Usuń" Height="23" HorizontalAlignment="Left" Margin="697,448,0,0" Name="Usun_uzytkownika_BTN" VerticalAlignment="Top" Width="227" Click="Usun_uzytkownika_BTN_Click" Background="#FFE4FFDE" FontWeight="Bold" />
+                    <Label Content="Nazwa:" Height="28" HorizontalAlignment="Left" Margin="697,293,0,0" Name="label10" VerticalAlignment="Top" />
+                    <Label Content="Hasło:" Height="28" HorizontalAlignment="Left" Margin="697,343,0,0" Name="label11" VerticalAlignment="Top" />
+                    <Button Height="29" HorizontalAlignment="Left" Margin="618,3,0,0" Name="Odswiez_uzytkownik_Button" VerticalAlignment="Top" Width="31" Click="Odswiez_uzytkownik_Button_Click">
+                        <Image Source="Images/refresh.png"/>
+                    </Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
