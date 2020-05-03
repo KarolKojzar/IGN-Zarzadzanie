@@ -1,1 +1,1 @@
-# IGN-Zarz-dzanie
+# IGN-Zarzadzanie
