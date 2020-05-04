@@ -772,7 +772,7 @@ namespace IGN_Zarzadzanie
         private void Wprowadz_Zamowienie_Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            string mojePolaczenie = "SERVER= 21615.m.tld.pl;" + "DATABASE= baza_1031;" + "UID= a_1031;" + "PASSWORD= 4SgrTvf^WF;";
+            string mojePolaczenie = "SERVER= xxx;" + "DATABASE= xxx;" + "UID= xxx;" + "PASSWORD= xxx;";
             _zmienna.polaczenie = new MySqlConnection(mojePolaczenie);
 
             utworzenie_edycja = Convert.ToBoolean(_theValue);
