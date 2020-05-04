@@ -24,7 +24,7 @@ namespace IGN_Zarzadzanie
         {
             InitializeComponent();
             odswiez.IGN.IsEnabled = false;
-            //string mojePolaczenie = "SERVER= 127.0.0.1;" + "DATABASE= test;" + "UID= root;" + "PASSWORD= k010289k;";
+            //string mojePolaczenie = "SERVER= xxx;" + "DATABASE= xxx;" + "UID= xxx;" + "PASSWORD= xxx;";
         }
 
         private void Zatwierdz_BTN_Click(object sender, RoutedEventArgs e)
@@ -143,7 +143,7 @@ namespace IGN_Zarzadzanie
 
         private void Dodawanie_produktow_Window_Loaded(object sender, RoutedEventArgs e)
         {
-            string mojePolaczenie = "SERVER= 21615.m.tld.pl;" + "DATABASE= baza_1031;" + "UID= a_1031;" + "PASSWORD= 4SgrTvf^WF;";
+            string mojePolaczenie = "SERVER= xxx;" + "DATABASE= xxx;" + "UID= xxx;" + "PASSWORD= xxx;";
             _zmienna.polaczenie = new MySqlConnection(mojePolaczenie);
         }
 
