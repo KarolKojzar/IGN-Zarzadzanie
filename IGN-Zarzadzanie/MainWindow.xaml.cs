@@ -57,7 +57,7 @@ namespace IGN_Zarzadzanie
 
         public void pobierzdane()
         {
-            string mojePolaczenie = "SERVER= 21615.m.tld.pl;" + "DATABASE= baza_1031;" + "UID= a_1031;" + "PASSWORD= 4SgrTvf^WF;";
+            string mojePolaczenie = "SERVER= xxx;" + "DATABASE= xxx;" + "UID= xxx;" + "PASSWORD= xxx;";
             _zmienna.polaczenie = new MySqlConnection(mojePolaczenie);
 
             try
